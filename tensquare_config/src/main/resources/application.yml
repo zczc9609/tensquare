@@ -1,0 +1,24 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: tensquare-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/chasemine/test.git
+          username: 497732191@qq.com
+          password: zc86200870
+  rabbitmq:
+    host: 10.0.65.13
+    port: 5672
+    username: guest
+    password: guest
+
+#暴露bus刷新配置的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

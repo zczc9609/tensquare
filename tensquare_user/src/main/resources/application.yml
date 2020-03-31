@@ -1,0 +1,27 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: tensquare-user
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tensquare_user?serverTimezone=UTC
+    username: root
+    password: 6200870
+  jpa:
+    database: MySQL
+    show-sql: true
+  redis:
+    host: 10.0.65.13
+  rabbitmq:
+    host: 10.0.65.13
+jwt:
+  config:
+    key: itcast   #盐
+    ttl: 3600000  #过期时间
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka/
+  instance:
+    prefer-ip-address: true
